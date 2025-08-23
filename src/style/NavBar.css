@@ -1,0 +1,182 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* S'assurer que html et body n'ont pas de marges/paddings */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* Variables CSS */
+  :root {
+    --text-claire: white;
+    --text-sombre: rgba(22, 22, 41, 0.893);
+    --primary-color: rgba(125, 205, 248, 0.308);
+    --second-color: rgba(22, 22, 41, 0.893);
+  }
+  
+  /****************NAVBAR******************/
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-top: 0; /* s’assurer qu’aucun margin ne pousse la navbar */
+  }
+  
+  #logo {
+    max-height: 40px;
+  }
+  
+  /* MENU Desktop */
+  #navWeb {
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+  
+  #navWeb li a {
+    color: var(--text-sombre);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  #contactHead {
+    background-color: var(--text-claire);
+    border: 2px solid var(--text-claire);
+    color: var(--text-sombre);
+    border-radius: 50px;
+    font-size: small;
+    padding: 5px 10px;
+    font-weight: 600;
+  }
+  
+  /* MENU Mobile */
+  #menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-claire);
+    margin-left: 10px;
+  }
+  
+  #navMobile {
+    display: none; /* caché par défaut */
+    flex-direction: column;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 60px; /* juste sous la navbar */
+    width: 100%;
+    left: 0;
+    padding: 15px 0;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+  
+  #navMobile.open {
+    display: flex;
+  }
+  
+  #navMobile li {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(22, 22, 41, 0.2);
+  }
+  
+  #navMobile li.menu-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-sombre);
+    padding-bottom: 15px;
+    border-bottom: none;
+  }
+  
+  #navMobile li a {
+    color: var(--text-sombre);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /*********************RESPONSIVE************************/ 
+  
+  @media (max-width: 1024px) {
+    #section1 h1 {
+      font-size: 3rem;
+    }
+    #section3 .box {
+      min-width: 250px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Cacher le menu desktop */
+    #navWeb {
+      display: none;
+    }
+  
+    /* Afficher le bouton menu */
+    #menuToggle {
+      display: inline-block;
+    }
+  
+    /* Réduire padding de la navbar pour mobile */
+    nav {
+        margin-top: 0;
+      padding: 10px 15px;
+    }
+  
+    /* Supprimer marges/paddings inutiles */
+    #section1 {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  
+    #section1 h1 {
+      font-size: 2rem;
+      margin-top: 0;
+    }
+  
+    #DecouBtn, #contact {
+      font-size: 0.9rem;
+      padding: 10px 18px;
+    }
+  
+    #section1 {
+      padding: 20px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #section1 h1 {
+      font-size: 1.8rem;
+    }
+  
+    .menu-title {
+      font-size: 1rem;
+    }
+  
+    #navMobile {
+      width: 100%;
+    }
+  }
+  
