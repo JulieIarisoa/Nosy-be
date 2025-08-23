@@ -11,8 +11,10 @@ function App() {
 
   return (
     <>
-      <NavBar />
-      <Section1 />
+      <div className="background-section">
+        <NavBar />
+        <Section1 />
+      </ div>
       <Section2 />
       <Section3 />
       <Section4 />
