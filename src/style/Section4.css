@@ -12,7 +12,10 @@
   }
   
   .slider-image-container {
+    position: relative;
     padding: 0 10px;
+    cursor: pointer;
+    overflow: visible;
   }
   
   .slider-image {
@@ -22,9 +25,35 @@
     border-radius: 12px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: block;
   }
   
   .slider-image:hover {
     transform: scale(1.03);
+  }
+  .image-description {
+    position: absolute;
+    bottom: 8px; /* Remonté un peu pour l'esthétique */
+    left: 12px;
+    right: 12px;
+    background-color: rgba(230, 240, 245, 0.85); /* Fond plus clair et plus doux */
+    color: #222; /* Texte moins dur que noir pur */
+    padding: 10px 14px;
+    font-size: 1rem;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 20;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Ombre douce et naturelle */
+    backdrop-filter: blur(6px); /* Flou derrière pour modernité */
+  }
+  
+  .slider-image-container:hover .image-description,
+  .slick-slide:hover .image-description {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
   
