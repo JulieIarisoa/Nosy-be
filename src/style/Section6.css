@@ -1,0 +1,67 @@
+.island-section {
+    padding: 4rem 2rem;
+    background-color: #f4f8fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+  }
+  
+  .island-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .row {
+    flex-direction: row;
+  }
+  
+  .row-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .island-image {
+    max-width: 500px;
+    max-height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+  
+  .island-description {
+    max-width: 500px;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .island-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a3e5d;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .island-container {
+      flex-direction: column !important;
+      text-align: center;
+    }
+  
+    .island-description {
+      padding: 0 1rem;
+    }
+  
+    .island-image {
+      max-width: 100%;
+    }
+  }
+  
