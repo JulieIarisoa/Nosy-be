@@ -45,7 +45,7 @@ const images = [
   { src: '/image/Galerie39.jpg', alt: 'Lokobe', description: 'Description de Lokobe' },
   { src: '/image/Galerie40.jpg', alt: 'Lokobe', description: 'Description de Lokobe' },
   { src: '/image/Galerie41.jpg', alt: 'Lokobe', description: 'Description de Lokobe' },
-  { src: '/image/Galerie42.jpg', alt: 'Lokobe', description: 'Description de Lokobe' },
+  { src: '/image/Galerie42.jpg', alt: 'Lokobe', description: 'Description dbe' },
 ];
 
 const GallerySlider = () => {
