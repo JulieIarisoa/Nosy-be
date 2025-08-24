@@ -15,7 +15,7 @@ function App() {
         <NavBar />
         <Section1 />
       </ div>
-      <Section2 />
+      <Section2 /> 
       <Section3 />
       <Section4 />
     </>

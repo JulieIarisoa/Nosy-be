@@ -1,0 +1,214 @@
+/* Section de la grille principale */
+#section3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+    background-color: #f9fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Carte de chaque excursion */
+  .box-popup {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .box-popup:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .box-popup h2 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .box-popup p {
+    font-size: 0.95rem;
+    margin: 0.4rem 0;
+    color: #555;
+  }
+  
+  .box-popup i {
+    margin-right: 6px;
+    color: #3498db;
+  }
+  
+  #popupSection {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  #popupSection:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Overlay de la popup */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Contenu de la popup */
+  .popup-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 14px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* Animation d’apparition */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Bouton de fermeture */
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    background: #c0392b;
+  }
+  
+  /* --- ✅ Contenu de la POPUP amélioré --- */
+  .popup-inner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #2c3e50;
+    font-size: 1rem;
+  }
+  
+  .popup-text-above-image {
+    text-align: center;
+  }
+  
+  .popup-text-above-image h3 {
+    font-size: 1.6rem;
+    color: #16a085;
+    margin-bottom: 0.2rem;
+  }
+  
+  .popup-text-above-image p {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+  }
+  
+  /* Image dans la popup */
+  .popup-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Bloc texte principal */
+  .popup-text p {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    line-height: 1.5;
+  }
+  
+  .popup-text h4 {
+    font-size: 1.2rem;
+    color: #2d3436;
+    margin-top: 1.2rem;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+  
+  /* Listes dans la popup */
+  .popup-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5rem 0;
+  }
+  
+  .popup-text ul li {
+    margin: 0.4rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.4;
+  }
+  
+  .popup-text ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #2ecc71;
+    font-size: 0.9rem;
+  }
+  
+  .popup-text strong {
+    color: #34495e;
+  }
+  
+  /* Responsive mobile */
+  @media screen and (max-width: 600px) {
+    .box-popup {
+      padding: 1.2rem;
+    }
+  
+    .popup-content {
+      padding: 1.5rem;
+    }
+  
+    .close-btn {
+      top: 0.8rem;
+      right: 0.8rem;
+    }
+  
+    .popup-inner-content {
+      font-size: 0.95rem;
+    }
+  
+    .popup-text h4 {
+      font-size: 1.1rem;
+    }
+  
+    .popup-text-above-image h3 {
+      font-size: 1.3rem;
+    }
+  }
+  
